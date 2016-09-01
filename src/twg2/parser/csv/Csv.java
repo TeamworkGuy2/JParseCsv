@@ -1,4 +1,4 @@
-package twg2.parser.io.csv;
+package twg2.parser.csv;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;

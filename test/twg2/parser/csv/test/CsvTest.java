@@ -1,4 +1,4 @@
-package twg2.parser.io.csv.test;
+package twg2.parser.csv.test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-import twg2.parser.io.csv.Csv;
+import twg2.parser.csv.Csv;
 import twg2.parser.textParser.TextParser;
 import twg2.parser.textParser.TextParserImpl;
 import twg2.streams.EnhancedIterator;
