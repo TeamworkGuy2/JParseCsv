@@ -1,0 +1,13 @@
+{
+	"version" : "0.1.0",
+	"name" : "jparser-csv",
+	"description" : "Parse and stringify CSV strings/files in Java",
+	"homepage" : "https://github.com/TeamworkGuy2/JParserCsv",
+	"license" : "MIT",
+	"main" : "./bin/jparser_csv.jar",
+	"dependencies" : {
+		"jstreamish": "*",
+		"jtext-parser": "*",
+		"jtext-util": "*"
+	}
+}
