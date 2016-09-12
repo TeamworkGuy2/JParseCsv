@@ -4,7 +4,13 @@ This project does its best to adhere to [Semantic Versioning](http://semver.org/
 
 
 --------
-###[0.1.1](N/A) - 2016-09-02
+###[0.1.2](N/A) - 2016-09-11
+#### Changed
+* Updated jtext-parser dependency to latest 0.9.0 version (TextParserImpl -> TextIteratorParser)
+
+
+--------
+###[0.1.1](https://github.com/TeamworkGuy2/JParseCsv/commit/b62d05daeab6deddb55fb2c2b65dc38652d36958) - 2016-09-02
 #### Changed
 * Renamed project from JParserCsv -> JParseCsv
 

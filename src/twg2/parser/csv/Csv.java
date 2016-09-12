@@ -17,8 +17,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+import twg2.parser.textParser.TextIteratorParser;
 import twg2.parser.textParser.TextParser;
-import twg2.parser.textParser.TextParserImpl;
 import twg2.parser.textParserUtils.ReadWhitespace;
 import twg2.streams.EnhancedIterator;
 
@@ -301,10 +301,10 @@ public class Csv {
 	public static final List<List<String>> readCsv(final Reader src, char quoteChar, char fieldSeparatorChar,
 			boolean readLeadingElementWhitespace, char[] whitespace) throws IOException {
 		List<List<String>> csvValues = null;
-		TextParserImpl in = null;
+		TextParser in = null;
 		try {
 			BufferedReader bufSrc = src instanceof BufferedReader ? (BufferedReader)src : new BufferedReader(src);
-			in = TextParserImpl.fromStrings(EnhancedIterator.fromReader(bufSrc, true, null));
+			in = TextIteratorParser.fromStrings(EnhancedIterator.fromReader(bufSrc, true, null));
 			csvValues = readCsv(in, quoteChar, fieldSeparatorChar, readLeadingElementWhitespace, whitespace);
 		} finally {
 			if(in != null) {

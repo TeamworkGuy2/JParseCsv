@@ -12,8 +12,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import twg2.parser.csv.Csv;
+import twg2.parser.textParser.TextIteratorParser;
 import twg2.parser.textParser.TextParser;
-import twg2.parser.textParser.TextParserImpl;
 import twg2.streams.EnhancedIterator;
 import twg2.text.stringUtils.StringCheck;
 
@@ -54,7 +54,7 @@ public class CsvTest {
 
 		Csv.writeCsvCustom(dst, csvLines, nullStr, quoteChar, fieldSeparatorChar, true);
 
-		TextParser in = TextParserImpl.of(dst.toString());
+		TextParser in = TextIteratorParser.of(dst.toString());
 
 		List<List<String>> resLines = Csv.readCsv(in, quoteChar, fieldSeparatorChar, false, null);
 
@@ -73,7 +73,7 @@ public class CsvTest {
 
 		Csv.writeCsvCustom(dst, csvLines, nullStr, quoteChar, fieldSeparatorChar, true);
 
-		TextParserImpl in = TextParserImpl.fromStrings(EnhancedIterator.fromReader(new BufferedReader(new StringReader(dst.toString())), true, null));
+		TextParser in = TextIteratorParser.fromStrings(EnhancedIterator.fromReader(new BufferedReader(new StringReader(dst.toString())), true, null));
 
 		List<List<String>> resLines = Csv.readCsv(in, quoteChar, fieldSeparatorChar, true, StringCheck.SIMPLE_WHITESPACE_NOT_NEWLINE);
 

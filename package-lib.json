@@ -1,5 +1,5 @@
 {
-	"version" : "0.1.1",
+	"version" : "0.1.2",
 	"name" : "jparse-csv",
 	"description" : "Parse and stringify CSV strings/files in Java",
 	"homepage" : "https://github.com/TeamworkGuy2/JParseCsv",
